@@ -1,0 +1,83 @@
+// ANOTAÇÕES DA AULA PDA
+
+**EcmaScript 6 (ES6):** Versão mais recente do JavaScript.
+
+**var:** Pode sobrecarregar a memória RAM. Por agir como escopo global, podem ocorrer muitos erros inesperados.
+
+**Atualizações:**
+- **let:** Aloca menos memória, é mais estável.
+- **const:** Valor que não se altera em tempo de execução do código.
+
+**Princípios do SOLID:** 
+- Enfatiza a responsabilidade única e a manutenção de um código limpo.
+
+**Banco de dados mockado:** Pode ser representado por um array de usuários.
+
+**Funções anônimas:** Usadas para evitar alterações inesperadas nas operações.
+
+**Callback:** Funções passadas como argumento para outras funções.
+
+**Código síncrono e assíncrono.**
+
+Exemplo de funções com callback para cálculo de média:
+
+```javascript
+const somarMedia = function (valor1, valor2, valor3, valor4) {
+  alert((valor1 + valor2 + valor3 + valor4) / 4);
+};
+
+function media(funcaoParaSomar) {
+  let nota1 = Number(prompt("Digite a sua nota 1:"));
+  let nota2 = Number(prompt("Digite a sua nota 2:"));
+  let nota3 = Number(prompt("Digite a sua nota 3:"));
+  let nota4 = Number(prompt("Digite a sua nota 4:"));
+  funcaoParaSomar(nota1, nota2, nota3, nota4);
+}
+
+media(somarMedia);
+```
+
+// CÓDIGO DA AULA PDA
+
+**Função anônima para subtração:**
+```javascript
+const Subtrair = (num1, num2) => {
+  return num1 - num2;
+};
+```
+
+Exemplo de uso do `addEventListener` com função anônima:
+```javascript
+/*.addEventListener("click", () => {
+  // código a ser executado no evento de clique
+})*/
+```
+
+**Função anônima para exibir um valor:**
+```javascript
+const mostrar = () => {
+  let valor = prompt("Insira o Valor");
+  console.log(valor);
+};
+```
+
+Exemplo com `setTimeout`:
+```javascript
+/* setTimeout(mostrar, 2000); */
+```
+
+**Função para exibir uma frase no console:**
+```javascript
+function exibe_frase(texto) {
+  console.log(texto);
+}
+
+function pegar_frase(exibe) {
+  let frase = prompt("Digite uma frase:");
+  exibe(frase);
+}
+
+pegar_frase(exibe_frase);
+```
+
+Essas anotações estão organizadas e exemplificadas de acordo com os tópicos abordados na aula, prontas para ser inseridas em um arquivo `.txt`.
